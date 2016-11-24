@@ -5,8 +5,18 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>Data Table</h1>
-    <p>Welcome to <%= title %></p>
+  <span>
+    <select id="selCircles">
+        <option value="NULL">Select A Circle</option>
+        <option value="friends">Friends</option>
+        <option value="family">Family</option>
+    </select>
+  </span>
+  <input type="button" id="btnLoadGrid" name="btnLoadGrid" value="Load Grid" />
+
+  <div id="divDataGrid">
+      <div id="divDataTable" style="margin: 10px; width: 100%;"></div>
+  </div>
   </body>
   <script src="../public/javascripts/table.js"></script>
 </html>
