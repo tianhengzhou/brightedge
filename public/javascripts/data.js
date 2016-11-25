@@ -2,10 +2,7 @@
  * Created by test on 11/24/16.
  */
 var table;
-var thead = document.getElementsByTagName('thead')[0];
-var th = thead.getElementsByTagName('th');
 var flag = 1;
-var valArr = ['firstName', 'lastName'];
 
 function showCircle(str) {
   if (str == '' || str == null){
@@ -38,11 +35,34 @@ function showCircle(str) {
 
 }
 
-
+function toggleCol(index) {
+  var td;
+  var tr = document.getElementsByTagName('tr');
+  var thead = document.getElementsByTagName('thead')[0];
+  var th = thead.getElementsByTagName('th');
+  for (var i = 0; i < tr.length; i++){
+    if (i == 0){
+      if (th[index].style.display != 'none'){
+        th[index].style.display = 'none';
+      }else {
+        th[index].style.display = 'table-cell';
+      }
+    }else{
+      td = tr[i].getElementsByTagName('td');
+      if (td[index].style.display != 'none'){
+        td[index].style.display = 'none';
+      }else{
+        td[index].style.display = 'table-cell';
+      }
+    }
+  }
+}
 function filter(event) {
   table.filter(event.target.value)
 }
 function sort(name, index) {
+  var thead = document.getElementsByTagName('thead')[0];
+  var th = thead.getElementsByTagName('th');
   for (var i = 0; i < th.length; i++){
     if (i != index){
       th[i].className = 'tableHeader';
