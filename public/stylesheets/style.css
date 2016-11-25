@@ -1,8 +1,88 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #333;
 }
 
 a {
   color: #00B7FF;
+}
+.paginate_button {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 1.5em;
+  padding: 0.5em 1em;
+  margin-left: 2px;
+  text-align: center;
+  text-decoration: none !important;
+  cursor: pointer;
+  color: #333 !important;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+.current {
+  color: #333 !important;
+  border: 1px solid #979797;
+  background-color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #dcdcdc));
+  background: -webkit-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+  background: -moz-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+  background: -ms-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+  background: -o-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+  background: linear-gradient(to bottom, #fff 0%, #dcdcdc 100%);
+}
+.dataTable{
+  box-sizing: content-box;
+  width: 100%;
+  margin: 0 auto;
+  clear: both;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table.dataTable tbody tr.odd {
+  background-color: #f9f9f9;
+}
+table.dataTable tbody tr.even {
+  background-color: #fff;
+}
+table.dataTable tbody td {
+  padding: 8px 10px;
+  box-sizing: content-box;
+  margin: 0;
+}
+.tableHeader{
+  text-align: left;
+  margin: 0;
+  padding:10px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  box-sizing: content-box;
+  border-bottom: 1px solid #111;
+}
+.disable{
+  cursor: default;
+  color: #666 !important;
+  border: 1px solid transparent;
+  background: transparent;
+  box-shadow: none;
+}
+th:hover {
+  background: #AAA;
+}
+th.tableHeader {
+  background-image: url("../image/sort_both.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+th.asc {
+  background-image: url("../image/sort_asc.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+th.desc {
+  background-image: url("../image/sort_desc.png");
+  background-repeat: no-repeat;
+  background-position: center right;
 }

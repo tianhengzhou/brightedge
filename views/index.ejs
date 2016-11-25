@@ -6,17 +6,20 @@
   </head>
   <body>
   <span>
-    <select id="selCircles">
-        <option value="NULL">Select A Circle</option>
+    <select id="selCircles" onchange="showCircle(this.value)">
+        <option value="">Select A Circle</option>
         <option value="friends">Friends</option>
-        <option value="family">Family</option>
+        <option value="families">Family</option>
     </select>
   </span>
-  <input type="button" id="btnLoadGrid" name="btnLoadGrid" value="Load Grid" />
-
-  <div id="divDataGrid">
-      <div id="divDataTable" style="margin: 10px; width: 100%;"></div>
-  </div>
+  <input type="text" placeholder="Search" oninput="filter(event);" />
+  <table class="dataTable">
+      <thead>
+      <th class="tableHeader" onclick="sort('firstName', 0)">First Name</th>
+      <th class="tableHeader" onclick="sort('lastName', 1)">Last Name</th>
+      </thead>
+  </table>
   </body>
-  <script src="../public/javascripts/table.js"></script>
+  <script src="javascripts/table.js"></script>
+  <script src="javascripts/data.js"></script>
 </html>
